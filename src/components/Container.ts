@@ -8,5 +8,5 @@ export const Container = styled.div`
     //min-height: 100vh;
     padding: 0 15px;
     // потом удалить
-    outline: 1px solid red;
+    //outline: 1px solid red;
 `

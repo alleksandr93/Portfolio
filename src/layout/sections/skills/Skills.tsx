@@ -1,10 +1,10 @@
-import styled from 'styled-components';
 import {SectionTitle} from '../../../components/SectionTitle.tsx';
 import Skill from './Skill/Skill.tsx';
 import {FlexWrapper} from '../../../components/FlexWrapper.tsx';
 import {Container} from '../../../components/Container.tsx';
+import {S} from './Skills_Styles.ts'
 
-const arraySkill = [
+const skillData = [
     {
         title: 'html5',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
@@ -39,16 +39,16 @@ const arraySkill = [
 ]
 const Skills = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
-                    {arraySkill.map((skill) => <Skill key={skill.iconId} iconId={skill.iconId} description={skill.text} title={skill.title}/>)}
+                    {skillData.map((skill) => <Skill key={skill.iconId} iconId={skill.iconId} description={skill.text} title={skill.title}/>)}
                 </FlexWrapper>
             </Container>
-        </StyledSkills>
+        </S.Skills>
     );
 };
 
 export default Skills;
-const StyledSkills = styled.section``
+
