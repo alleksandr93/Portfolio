@@ -4,18 +4,21 @@ import Icon from '../../../components/icon/Icon.tsx';
 import {Slider} from '../../../components/slider/Slider.tsx';
 import {IconWrapper} from '../skills/Skill/Skill.tsx';
 import {FlexWrapper} from '../../../components/FlexWrapper.tsx';
+import {Container} from '../../../components/Container.tsx';
 
 
 export const Testimony = () => {
     return (
         <StyledTestimony>
-            <SectionTitle>Testimony</SectionTitle>
-            <FlexWrapper direction={'column'} align={'center'}>
-                <IconWrapper>
-                    <Icon iconId={'quote'}></Icon>
-                </IconWrapper>
-                <Slider/>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>Testimony</SectionTitle>
+                <FlexWrapper direction={'column'} align={'center'}>
+                    <IconWrapper>
+                        <Icon iconId={'quote'}></Icon>
+                    </IconWrapper>
+                    <Slider/>
+                </FlexWrapper>
+            </Container>
         </StyledTestimony>
     );
 };
