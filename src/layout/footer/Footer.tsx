@@ -1,5 +1,5 @@
 import Icon from '../../components/icon/Icon.tsx';
-import {FlexWrapper} from '../../components/FlexWrapper.tsx';
+import {FlexWrapper} from '../../components/FlexWrapper.ts';
 import {S} from './Footer_Styles.ts'
 const iconsSocial = ['instagram', 'telegram', 'vk', 'linkedin']
 

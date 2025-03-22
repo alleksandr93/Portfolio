@@ -1,6 +1,6 @@
-import {SectionTitle} from '../../../components/SectionTitle.tsx';
-import {Button} from '../../../components/Button.tsx';
-import {Container} from '../../../components/Container.tsx';
+import {SectionTitle} from '../../../components/SectionTitle.ts';
+import {Button} from '../../../components/Button.ts';
+import {Container} from '../../../components/Container.ts';
 import {S} from './Contact_Styles.ts'
 
 export const Contact = () => {

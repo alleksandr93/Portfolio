@@ -1,11 +1,18 @@
 import styled from 'styled-components';
-import {Link} from '../../../../components/Link.tsx';
+import {Link} from '../../../../components/Link.ts';
+import type {TabsItemsType} from '../Works.tsx';
 
-export const TabMenu = (props: { menuItems: string[] }) => {
+type Props = {
+    onClick:(status:TabsItemsType['status'])=>void
+    tabsItems: TabsItemsType[]
+    status:TabsItemsType['status']
+}
+
+export const TabMenu = ({tabsItems,onClick,status}:Props) => {
     return (
         <StyledTabMenu>
             <ul>
-                {props.menuItems.map((item, index) => <ListItem key={index}><Link href="">{item}</Link></ListItem>)}
+                {tabsItems.map((item, index) => <ListItem  key={index}><Link active={item.status===status}  as={'button'}  onClick={()=>onClick(item.status)}>{item.title}</Link></ListItem>)}
             </ul>
         </StyledTabMenu>
     );
@@ -24,5 +31,6 @@ const StyledTabMenu = styled.div`
 
 `
 const ListItem = styled.li`
+
 
 `
