@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import {SectionTitle} from '../../../components/SectionTitle.ts';
 import Icon from '../../../components/icon/Icon.tsx';
-import {Slider} from '../../../components/slider/Slider.tsx';
 import {S} from '../skills/Skills_Styles.ts';
 import {FlexWrapper} from '../../../components/FlexWrapper.ts';
 import {Container} from '../../../components/Container.ts';
+import {Slider} from '../../../components/slider/Slider.tsx';
 
 
 export const Testimony = () => {

@@ -1,0 +1,23 @@
+.alice-carousel__dots{
+    margin: 0 !important;
+
+}
+
+.alice-carousel__dots-item:not(.__custom){
+    display: inline-block !important;
+    width: 7px !important;
+    height: 7px !important;
+
+    background-color: #FFFFFF80 !important;
+    border-radius: 20px !important;
+}
+.alice-carousel__dots-item:not(.__custom):not(:last-child){
+    margin-right: 5px !important;
+}
+.alice-carousel__dots-item:not(.__custom):hover{
+    background-color: #7572D5 !important ;
+}
+.alice-carousel__dots-item:not(.__custom).__active{
+    background-color: #7572D5 !important ;
+    width: 20px !important;
+}
