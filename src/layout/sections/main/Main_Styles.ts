@@ -45,7 +45,11 @@ const Name = styled.h2`
     }
 `
 const MainTitle = styled.h1`
-    ${font({fontMax:27,fontMin:20,weight:400})}
+    ${font({fontMax:27,fontMin:20,weight:400})};
+    p {
+   display: none;
+    }
+    
   
 `
 const Photo = styled.img`

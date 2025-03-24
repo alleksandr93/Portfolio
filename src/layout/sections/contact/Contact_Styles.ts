@@ -1,7 +1,9 @@
 import {Theme} from '../../../styles/Theme.ts';
 import styled from 'styled-components';
 
-const Contact = styled.section``
+const Contact = styled.section`
+position: relative;
+`
 const Form = styled.form`
     max-width: 540px;
     width: 100%;

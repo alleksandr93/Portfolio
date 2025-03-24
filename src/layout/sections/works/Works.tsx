@@ -49,7 +49,7 @@ export const Works = () => {
     const [filterStatus,setFilterStatus]=React.useState<TabsItemsType['status']>('all');
     const filtredWorks = filterStatus === 'all' ? workData : workData.filter(el=>el.type===filterStatus);
     return (
-        <S.Works>
+        <S.Works id={'works'}>
             <Container>
                 <SectionTitle>Works</SectionTitle>
                 <TabMenu status={filterStatus} tabsItems={tabsItems} onClick={(status)=>setFilterStatus(status)}></TabMenu>

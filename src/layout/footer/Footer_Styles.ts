@@ -5,6 +5,7 @@ import {Theme} from '../../styles/Theme.ts';
 const Footer = styled.footer`
     background-color: ${Theme.colors.prymariBg};
     padding: 40px 0;
+    position: relative;
 `
 const Name = styled.span`
     ${font({family:'"Josefin Sans", sans-serif',weight:700,fontMax:22,fontMin:16})}

@@ -9,7 +9,7 @@ import {Slider} from '../../../components/slider/Slider.tsx';
 
 export const Testimony = () => {
     return (
-        <StyledTestimony>
+        <StyledTestimony id={'testimony'}>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexWrapper direction={'column'} align={'center'}>
@@ -25,7 +25,7 @@ export const Testimony = () => {
 const StyledTestimony = styled.section`
     min-height: 100vh;
     background-color: #d2d2d2;
-
+position: relative;
     ${S.IconWrapper} {
         margin: 28px 0 72px;
     }

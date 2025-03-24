@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 import {Theme} from '../../../styles/Theme.ts';
-
+import {Link} from 'react-scroll';
 
 
 const Mask = styled.span`
@@ -34,13 +34,14 @@ const MenuItem = styled.li`
         right: -10px;
         z-index: 1;
         transform: scale(0);
+        pointer-events: none;
     }
 
     &:hover {
         &::before {
             transform: scale(1);
         }
-   
+
         ${Mask} {
             transform: skewX(12deg) translateX(5px);
             color: ${Theme.colors.font};
@@ -51,13 +52,19 @@ const MenuItem = styled.li`
         }
     }
 `
-const Link = styled.a`
+const NavLink = styled(Link)`
     font-family: "Josefin Sans", sans-serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 55px;
     text-align: center;
-color: transparent;
+    color: transparent;
+    &.active{
+        border-bottom: 2px solid ${Theme.colors.font};
+        @media ${Theme.media.tablet} {
+            border-bottom: none;
+        }
+    }
 `
 
 //Mobile menu
@@ -72,6 +79,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     z-index: 3;
     background-color: rgba(31, 31, 32, 0.9);
     display: none;
+
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;
         justify-content: center;
@@ -151,6 +159,6 @@ const DesktopMenu = styled.nav`
     }
 
 `
-export const S={
-    Link,MenuItem,Mask,MobileMenu,MobileMenuPopup,BurgerButton,DesktopMenu
+export const S = {
+    NavLink, MenuItem, Mask, MobileMenu, MobileMenuPopup, BurgerButton, DesktopMenu
 }

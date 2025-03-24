@@ -3,18 +3,20 @@ import {Button} from '../../../components/Button.ts';
 import {Container} from '../../../components/Container.ts';
 import {S} from './Contact_Styles.ts'
 
+
 export const Contact = () => {
     return (
-        <S.Contact>
+        <S.Contact id="contact">
             <Container>
                 <SectionTitle>Contact</SectionTitle>
                 <S.Form>
                     <S.Field name={'name'} placeholder={'Name'}/>
                     <S.Field name={'lastName'} placeholder={'Subject'}/>
-                    <S.Field  placeholder={'message'} as={'textarea'}/>
+                    <S.Field placeholder={'message'} as={'textarea'}/>
                     <Button type={'submit'}>Send message</Button>
                 </S.Form>
             </Container>
         </S.Contact>
     );
 };
+
