@@ -7,7 +7,7 @@
     display: inline-block !important;
     width: 7px !important;
     height: 7px !important;
-
+    transition: 0.2s ease-in-out;
     background-color: #FFFFFF80 !important;
     border-radius: 20px !important;
 }

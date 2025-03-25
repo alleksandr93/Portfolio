@@ -3,6 +3,7 @@ import Skill from './Skill/Skill.tsx';
 import {FlexWrapper} from '../../../components/FlexWrapper.ts';
 import {Container} from '../../../components/Container.ts';
 import {S} from './Skills_Styles.ts'
+import { Zoom} from 'react-awesome-reveal';
 
 const skillData = [
     {
@@ -43,7 +44,9 @@ const Skills = () => {
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
-                    {skillData.map((skill) => <Skill key={skill.iconId} iconId={skill.iconId} description={skill.text} title={skill.title}/>)}
+                    {skillData.map((skill) => <Zoom  cascade={true}>
+                        <Skill key={skill.iconId} iconId={skill.iconId} description={skill.text} title={skill.title}/>
+                    </Zoom>)}
                 </FlexWrapper>
             </Container>
         </S.Skills>

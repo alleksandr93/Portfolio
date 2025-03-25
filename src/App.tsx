@@ -8,6 +8,7 @@ import {Slogan} from './layout/sections/slogan/Slogan.tsx';
 import {Footer} from './layout/footer/Footer.tsx';
 import {Header} from './layout/header/Header.tsx';
 import {Particle} from './components/particle/Particle.tsx';
+import {GoTopBtn} from './components/goTopBtn/GoTopBtn.tsx';
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
             <Contact/>
             <Slogan/>
             <Footer/>
+            <GoTopBtn/>
         </div>
     )
 }

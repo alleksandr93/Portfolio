@@ -4,6 +4,7 @@ import {Theme} from '../../../styles/Theme.ts';
 import {Link} from '../../../components/Link.ts';
 import {Button} from '../../../components/Button.ts';
 
+
 const Works = styled.section`
     position: relative;
     ${FlexWrapper} {
@@ -13,8 +14,7 @@ const Works = styled.section`
 const Work=styled.div`
     background-color: ${Theme.colors.secondaryBg};
     max-width: 540px;
-    width: 330px;
-    flex-grow: 1;
+ 
     ${Link} {
         padding: 10px 0;
 
@@ -34,8 +34,9 @@ const ImageWrapper = styled.div`
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -40%);
         opacity: 0;
+        transition: ${Theme.animations.transition};
         &:before{
             width: 100%;
             height: 100%;
@@ -49,8 +50,9 @@ const ImageWrapper = styled.div`
         top: 0;
         bottom: 0;
         background: #0000004D;
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(2px);
         opacity:0;
+        transition: ${Theme.animations.transition};
     }
 
     &:hover {
@@ -59,6 +61,7 @@ const ImageWrapper = styled.div`
         }
         ${Button} {
             opacity: 1;
+            transform: translate(-50%, -50%);
         }
     }
 

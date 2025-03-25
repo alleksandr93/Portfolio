@@ -27,7 +27,7 @@ const SocialIconLink = styled.a`
     width: 35px;
     height: 35px;
     color: ${Theme.colors.accent};
-
+transition: ${Theme.animations.transition};
     &:hover {
         color: ${Theme.colors.prymariBg};
         background-color: ${Theme.colors.accent};
