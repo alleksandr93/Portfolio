@@ -5,7 +5,8 @@ import {S} from './Contact_Styles.ts'
 import {type MouseEvent, useState} from 'react';
 import axios from 'axios';
 
-
+const vercel ='https://email-sendler-git-main-alleksandrs-projects.vercel.app/send'
+const host = 'http://localhost:3010/send'
 export const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -14,7 +15,7 @@ export const Contact = () => {
     const [text, setText] = useState('');
     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        axios.post('https://email-sendler.vercel.app/send', {
+        axios.post(vercel, {
             username: name,
             customMessage: text,
             company,
