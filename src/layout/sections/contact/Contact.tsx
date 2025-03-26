@@ -14,7 +14,7 @@ export const Contact = () => {
     const [contact, setContact] = useState('');
     const [text, setText] = useState('');
     const onClickHandler =  (e: MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
+        // e.preventDefault();
       axios.post(vercel, {
             username: name,
             customMessage: text,
