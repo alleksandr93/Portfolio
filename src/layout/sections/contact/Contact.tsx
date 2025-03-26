@@ -6,7 +6,7 @@ import {type MouseEvent, useState} from 'react';
 import axios from 'axios';
 
 const vercel ='https://email-sendler.vercel.app/send'
-const host = 'http://localhost:3010/send'
+// const host = 'http://localhost:3010/send'
 export const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -21,12 +21,16 @@ export const Contact = () => {
             company,
             contact,
             email
-        }).then(() => {
-            setName('')
-            setEmail('')
-            setCompany('')
-            setContact('')
-            setText('')
+        }).then((res) => {
+            if(res.status === 200){
+                console.log('GOOD')
+                setName('')
+                setEmail('')
+                setCompany('')
+                setContact('')
+                setText('')
+            }
+
         })
     }
     return (
