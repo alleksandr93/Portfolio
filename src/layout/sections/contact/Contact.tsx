@@ -22,7 +22,7 @@ export const Contact = () => {
             contact,
             email
         }).then(res=>{
-          console.log(res)
+          console.log('Got contact');
           setName('')
           setEmail('')
           setCompany('')
