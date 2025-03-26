@@ -13,8 +13,9 @@ export const Contact = () => {
     const [company, setCompany] = useState('');
     const [contact, setContact] = useState('');
     const [text, setText] = useState('');
+
     const onClickHandler =  (e: MouseEvent<HTMLButtonElement>) => {
-        // e.preventDefault();
+        e.preventDefault();
       axios.post(vercel, {
             username: name,
             customMessage: text,
@@ -22,12 +23,13 @@ export const Contact = () => {
             contact,
             email
         }).then(res=>{
-          console.log('Got contact');
-          setName('')
-          setEmail('')
-          setCompany('')
-          setContact('')
-          setText('')
+          if(res.data.success===true){
+              setName('')
+              setEmail('')
+              setContact('')
+              setCompany('')
+              setText('')
+          }
       })
     }
     return (
